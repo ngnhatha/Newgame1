@@ -35,7 +35,16 @@ x = x+ hsp
 
 //Check for vertical collisions
 var onepixel = sign(vsp)
-
+if (place_meeting(x,hsp+y,oWall))
+{
+	//move as close as we can, then stop
+	while (place_meeting(x,onepixel+y,oWall)
+	{
+		y = y +  onepixel
+	}
+	vsp = 0; 
+	//Update y
+	y = y+vsp
 /*
 	right key only is pressed:
 	hsp = (1-0) * 4 = 1 * 4 = 4
@@ -48,5 +57,4 @@ var onepixel = sign(vsp)
 	
 */
 	
-//Move character by hsp x =x position of the player on the canvas
-x = x + hsp
+
